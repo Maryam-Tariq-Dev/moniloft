@@ -1,0 +1,207 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .logo {
+    height: 50px;
+}
+
+header .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+header .nav-menu {
+    display: flex;
+}
+
+header .nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .nav-menu ul li a:hover {
+    color: #cce7ff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #0073e6, #003399), url('https://source.unsplash.com/1600x900/?smartphone') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    margin: 10px;
+    border: none;
+    background-color: #0052cc;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #003399;
+}
+
+/* Featured Products Section */
+.featured-products {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured-products h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #0073e6;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    font-size: 1.4em;
+    color: #0052cc;
+}
+
+.product-card p {
+    color: #333;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer Section */
+footer {
+    background-color: #003399;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #cce7ff;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header .menu-toggle {
+        display: block;
+    }
+
+    header .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0073e6;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header .nav-menu.active {
+        display: flex;
+    }
+
+    header .nav-menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
